@@ -1,40 +1,43 @@
 {
- "name": "mustache",
- "displayName": "Mustache",
- "description": "Syntax highlighting for mustache",
- "version": "1.0.0",
- "publisher": "dawhite",
- "engines": {
-  "vscode": "^1.5.0"
- },
- "categories": [
-  "Languages"
- ],
- "contributes": {
-  "languages": [
-   {
-    "id": "mustache",
-    "aliases": [
-     "Mustache (HTML)",
-     "mustache"
+    "name": "mustache",
+    "displayName": "Mustache",
+    "description": "Syntax highlighting for mustache",
+    "version": "1.1.0",
+    "publisher": "dawhite",
+    "engines": {
+        "vscode": "^1.5.0"
+    },
+    "categories": [
+        "Languages"
     ],
-    "extensions": [
-     ".mustache"
-    ],
-    "configuration": "./language-configuration.json"
-   }
-  ],
-  "grammars": [
-   {
-    "language": "mustache",
-    "scopeName": "source.mustache",
-    "path": "./syntaxes/mustache.tmLanguage"
-   }
-  ]
- },
- "__metadata": {
-  "id": "a831e395-d150-46aa-8644-3027af1c5b36",
-  "publisherId": "5c25604e-7ca1-444e-9299-4d05580629a8",
-  "publisherDisplayName": "Dan White"
- }
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/danwhite85/vscode-mustache-syntax-highlighting"
+    },
+    "contributes": {
+        "languages": [{
+            "id": "mustache",
+            "aliases": [
+                "Mustache (HTML)",
+                "mustache"
+            ],
+            "extensions": [
+                ".mustache",
+                ".mst",
+                ".mu",
+                ".stache"
+            ],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "mustache",
+            "scopeName": "source.mustache",
+            "path": "./syntaxes/mustache.tmLanguage"
+        }]
+    },
+    "__metadata": {
+        "id": "a831e395-d150-46aa-8644-3027af1c5b36",
+        "publisherId": "5c25604e-7ca1-444e-9299-4d05580629a8",
+        "publisherDisplayName": "Dan White"
+    }
 }
