@@ -33,7 +33,18 @@
             "language": "mustache",
             "scopeName": "source.mustache",
             "path": "./syntaxes/mustache.tmLanguage"
-        }]
+        }],
+        "configuration": {
+            "type": "object",
+            "title": "Mustache Syntax Configuration",
+            "properties": {
+                "mustache.blockComment": {
+                    "type": "array",
+                    "default": ["{{!", "}}"],
+                    "description": "Sets the block comment styles to use in mustache templates"
+                }
+            }
+        }
     },
     "__metadata": {
         "id": "a831e395-d150-46aa-8644-3027af1c5b36",
