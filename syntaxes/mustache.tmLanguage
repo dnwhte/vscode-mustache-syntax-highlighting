@@ -5,6 +5,9 @@
 	<key>fileTypes</key>
 	<array>
 		<string>mustache</string>
+		<string>mst</string>
+		<string>mu</string>
+		<string>stache</string>
 	</array>
 	<key>name</key>
 	<string>Mustache (HTML)</string>
