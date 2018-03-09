@@ -2,7 +2,7 @@
     "name": "mustache",
     "displayName": "Mustache",
     "description": "Syntax highlighting for mustache",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "publisher": "dawhite",
     "engines": {
         "vscode": "^1.5.0"
