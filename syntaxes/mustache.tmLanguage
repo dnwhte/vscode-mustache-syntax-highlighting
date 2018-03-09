@@ -39,9 +39,9 @@
 		<key>blocks</key>
 		<dict>
 			<key>begin</key>
-			<string>\{\{\s*(#|\^)[A-Za-z0-9_.]+\s*\}\}</string>
+			<string>\{\{\s*(#|\^)\s?[A-Za-z0-9_.]+\s*\}\}</string>
 			<key>end</key>
-			<string>\{\{/[A-Za-z0-9_.]+\}\}</string>
+			<string>\{\{/\s?[A-Za-z0-9_.]+\}\}</string>
 			<key>name</key>
 			<string>entity.name.tag.mustache</string>
 			<key>patterns</key>
@@ -71,8 +71,10 @@
 			<key>patterns</key>
 			<array>
 				<dict>
-					<key>match</key>
-					<string>\{\{!\s*([A-Za-z0-9_.?]+)\s*\}\}</string>
+					<key>begin</key>
+					<string>\{\{!</string>
+					<key>end</key>
+					<string>\}\}</string>
 					<key>name</key>
 					<string>comment.mustache</string>
 				</dict>
@@ -84,7 +86,7 @@
 			<array>
 				<dict>
 					<key>match</key>
-					<string>\{\{&gt;\s*([A-Za-z0-9_.?]+)\s*\}\}</string>
+					<string>\{\{>\s*([A-Za-z0-9_.?]+)\s*\}\}</string>
 					<key>name</key>
 					<string>keyword.operator.mustache</string>
 				</dict>
