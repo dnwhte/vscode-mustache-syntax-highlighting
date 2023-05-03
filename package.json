@@ -14,30 +14,56 @@
         "type": "git",
         "url": "https://github.com/danwhite85/vscode-mustache-syntax-highlighting"
     },
+    "activationEvents": [],
+    "main": "./out/extension.js",
     "contributes": {
-        "languages": [{
-            "id": "mustache",
-            "aliases": [
-                "Mustache (HTML)",
-                "mustache"
-            ],
-            "extensions": [
-                ".mustache",
-                ".mst",
-                ".mu",
-                ".stache"
-            ],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "mustache",
-            "scopeName": "source.mustache",
-            "path": "./syntaxes/mustache.tmLanguage"
-        }]
+        "commands": [
+			{
+				"command": "extension.helloWorld",
+				"title": "Hello World"
+			}
+		],
+        "languages": [
+            {
+                "id": "mustache",
+                "aliases": [
+                    "Mustache (HTML)",
+                    "mustache"
+                ],
+                "extensions": [
+                    ".mustache",
+                    ".mst",
+                    ".mu",
+                    ".stache"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "mustache",
+                "scopeName": "source.mustache",
+                "path": "./syntaxes/mustache.tmLanguage"
+            }
+        ]
     },
     "__metadata": {
         "id": "a831e395-d150-46aa-8644-3027af1c5b36",
         "publisherId": "5c25604e-7ca1-444e-9299-4d05580629a8",
         "publisherDisplayName": "Dan White"
+    },
+    "scripts": {
+		"vscode:prepublish": "yarn run compile",
+		"compile": "tsc -p ./",
+		"lint": "eslint \"src/**/*.ts\"",
+		"watch": "tsc -watch -p ./"
+	},
+    "devDependencies": {
+        "@types/node": "^18.16.3",
+        "@types/vscode": "^1.77.0",
+        "@typescript-eslint/eslint-plugin": "^5.59.2",
+        "@typescript-eslint/parser": "^5.59.2",
+        "eslint": "^8.39.0",
+        "typescript": "^5.0.4"
     }
 }
