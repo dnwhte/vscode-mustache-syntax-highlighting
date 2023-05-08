@@ -14,7 +14,9 @@
         "type": "git",
         "url": "https://github.com/danwhite85/vscode-mustache-syntax-highlighting"
     },
-    "activationEvents": [],
+    "activationEvents": [
+        "onStartupFinished"
+    ],
     "main": "./out/extension.js",
     "contributes": {
         "languages": [
