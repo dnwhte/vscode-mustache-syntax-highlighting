@@ -8,12 +8,12 @@ const VALID_SECTION_CHARACTERS = new Set([
 const OPEN_SECTION_SYMBOLS_REGEX = /{|}|#|\^/g;
 const CLOSED_SECTION_SYMBOLS_REGEX = /{|}|\^|\//g;
 
-export function activate(_: ExtensionContext) {
+export function activate(context: ExtensionContext) {
   const editorDecoration = Window.createTextEditorDecorationType({
     backgroundColor: new ThemeColor('editor.wordHighlightTextBackground')
   });
 
-  Window.onDidChangeTextEditorSelection((event) => {
+  const selectionEvent = Window.onDidChangeTextEditorSelection((event) => {
     if (event.selections.length === 1) {
       const cursorPos = event.selections[0].active;
 
@@ -22,6 +22,8 @@ export function activate(_: ExtensionContext) {
       event.textEditor.setDecorations(editorDecoration, [rangeToHighlight]);
     }
   });
+
+  context.subscriptions.push(selectionEvent);
 }
 
 function getRangeToHighlight(document: TextDocument, cursorPos: Position): Range {
